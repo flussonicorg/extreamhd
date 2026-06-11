@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Stream Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0b0b0b;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+.site-header{
+    background:#111;
+    border-bottom:1px solid #222;
+}
+
+.header-inner{
+    max-width:1400px;
+    margin:auto;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* HEADER LOGO 250x30 */
+.logo img{
+    width:250px;
+    height:30px;
+    object-fit:contain;
+    display:block;
+    cursor:pointer;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1400px;
+    margin:auto;
+    padding:15px;
+}
+
+/* TOP AD */
+.top-ad{
+    width:728px;
+    height:90px;
+    margin:0 auto 15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+/* CONTENT */
+.content{
+    display:flex;
+    gap:15px;
+}
+
+/* PLAYER */
+.player-section{
+    flex:1;
+}
+
+/* YouTube Style Player */
+.player-wrapper{
+    position:relative;
+    width:100%;
+    padding-top:56.25%;
+    background:#000;
+    border:1px solid #222;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.player-wrapper iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+/* MID AD */
+.mid-ad{
+    width:100%;
+    max-width:468px;
+    height:60px;
+    margin:15px auto 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:300px;
+}
+
+.ad-box{
+    background:#1c1c1c;
+    border:1px solid #333;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.ad-300x250{
+    width:300px;
+    height:250px;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    color:#888;
+    padding:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+    .content{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+
+    .top-ad{
+        width:100%;
+        max-width:728px;
+    }
+}
+
+@media(max-width:768px){
+    .mid-ad{
+        display:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+
+        <a href="#" class="logo" id="randomLogoLink">
+            <img src="https://soccersurge.io/images/Logo_2.png" alt="Logo">
+        </a>
+
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- TOP AD -->
+    <div class="top-ad">
+
+        <script>
+          atOptions = {
+            'key' : '9d6d628b443193dab02a9bd268f4e593',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/9d6d628b443193dab02a9bd268f4e593/invoke.js"></script>
+
+    </div>
+
+    <div class="content">
+
+        <!-- PLAYER -->
+        <div class="player-section">
+
+            <div class="player-wrapper">
+                <iframe src="https://your-stream-url.com" allowfullscreen></iframe>
+            </div>
+
+            <!-- MID AD -->
+            <div class="mid-ad">
+
+                <script>
+                  atOptions = {
+                    'key' : '2967c60c2a8bd7497a3e9609dc6f8766',
+                    'format' : 'iframe',
+                    'height' : 60,
+                    'width' : 468,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highperformanceformat.com/2967c60c2a8bd7497a3e9609dc6f8766/invoke.js"></script>
+
+            </div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <div class="ad-box ad-300x250">
+
+                <script>
+                  atOptions = {
+                    'key' : '95ce051a4865de425dae542d1e1c241b',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highperformanceformat.com/95ce051a4865de425dae542d1e1c241b/invoke.js"></script>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="footer">
+    © 2026 Live Stream
+</footer>
+
+< HEADER CLICK >
+<script>
+document.getElementById("randomLogoLink").addEventListener("click", function(e){
+    e.preventDefault();
+
+    const links = [
+        "https://soccersurge.io",
+        "https://sportsurge.net"
+    ];
+
+    const randomLink = links[Math.floor(Math.random() * links.length)];
+
+    window.open(randomLink, "_blank");
+});
+</script>
+
+</body>
+</html>
